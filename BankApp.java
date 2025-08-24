@@ -3,8 +3,8 @@ import java.util.*;
 
 public class BankApp {
 
-    private static HashMap<Integer, UserService> accounts;
-    private static HashMap<Integer, UserDetails> reg;
+    private static HashMap<Integer, UserService> accounts = new HashMap<>();
+    private static HashMap<Integer, UserDetails> reg = new HashMap<>();
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
