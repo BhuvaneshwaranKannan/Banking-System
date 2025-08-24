@@ -37,8 +37,7 @@ public class BankApp {
                 System.out.println("");
 
                 switch (opt) {
-                    // <-------------------------------------------------- Register
-                    // ------------------------------------------------------------>
+                    // <-------------------------------------------------- Register ------------------------------------------------------------>
                     case 1 -> {
 
                         int NewAccNo = -1;
@@ -161,8 +160,7 @@ public class BankApp {
                         System.out.println("\u001B[36m--->You have to login to continue.\u001B[0m");
                         System.out.println("");
                     }
-                    // <-------------------------------------------------- Login
-                    // ------------------------------------------------------------>
+                    // <-------------------------------------------------- Login ------------------------------------------------------------>
                     case 2 -> {
 
                         int oldAccNo = 0;
@@ -482,7 +480,7 @@ public class BankApp {
                                                         "\u001B[34m<----------------- Your Account Details ----------------->\u001B[0m\n");
                                                 System.out.println(reg.get(oldAccNo));
                                                 System.out.println(
-                                                        "\n\u001B[34m<--------------- X X X X X X X X X X X ---------------->\u001B[0m");
+                                                        "\n\u001B[34m<--------------- X X X X X X X X X X X ---------------->\u001B[0m\n");
                                             } else {
                                                 System.out.println("\u001B[31mYou Didn't Add your details\u001B[0m\n");
                                             }

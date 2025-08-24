@@ -18,53 +18,6 @@ class UserService implements BankUserService {
     }
 
     @Override
-    public String getDateAndTime() {
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String timestamp = now.format(formatter);
-        return timestamp;
-    }
-
-    @Override
-    public void getStatements() {
-        System.out.println(
-                "\u001B[33m<-------------------------------- Transaction History -------------------------------->\u001B[0m\n");
-        if (statements.isEmpty()) {
-            System.out.println("\u001B[32mNo Transaction History Yet\u001B[0m\n");
-        } else {
-            for (String i : statements) {
-                System.out.println(i);
-            }
-        }
-        System.out.println(
-                "\n\u001B[33m<-------------------------------- X X X X X X X X X X -------------------------------->\u001B[0m\n");
-    }
-
-    @Override
-    public void setAmount(double amount) {
-        this.balance = amount;
-        statements.add("On " + "\u001B[34m[" + getDateAndTime() + "]\u001B[0m"
-                + " - You have Deposited Initial Amount "
-                + "\u001B[32mRs. " + amount + "\u001B[0m"
-                + " in your Account");
-    }
-
-    @Override
-    public void changeSecurityKey(String password) {
-        this.securityKey = password;
-    }
-
-    @Override
-    public String getSecurityKey() {
-        return securityKey;
-    }
-
-    @Override
-    public double getBalance() {
-        return balance;
-    }
-
-    @Override
     public void deposit(double amount) {
         if (0 < amount) {
             balance = balance + amount;
@@ -143,6 +96,53 @@ class UserService implements BankUserService {
                     + " - Amount Transfering attempt FAILED (Insufficient Balance)");
             System.out.println("\u001B[31mError Withdrawing!\u001B[0m\n");
         }
+    }
+    
+    @Override
+    public String getDateAndTime() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String timestamp = now.format(formatter);
+        return timestamp;
+    }
+
+    @Override
+    public void getStatements() {
+        System.out.println(
+                "\u001B[33m<-------------------------------- Transaction History -------------------------------->\u001B[0m\n");
+        if (statements.isEmpty()) {
+            System.out.println("\u001B[32mNo Transaction History Yet\u001B[0m\n");
+        } else {
+            for (String i : statements) {
+                System.out.println(i);
+            }
+        }
+        System.out.println(
+                "\n\u001B[33m<-------------------------------- X X X X X X X X X X -------------------------------->\u001B[0m\n");
+    }
+
+    @Override
+    public void setAmount(double amount) {
+        this.balance = amount;
+        statements.add("On " + "\u001B[34m[" + getDateAndTime() + "]\u001B[0m"
+                + " - You have Deposited Initial Amount "
+                + "\u001B[32mRs. " + amount + "\u001B[0m"
+                + " in your Account");
+    }
+
+    @Override
+    public void changeSecurityKey(String password) {
+        this.securityKey = password;
+    }
+
+    @Override
+    public String getSecurityKey() {
+        return securityKey;
+    }
+
+    @Override
+    public double getBalance() {
+        return balance;
     }
 }
 
