@@ -77,12 +77,12 @@ public class BankApp {
                         CheckUserDetails check = new CheckUserDetails();
                         if (yOrN == 'y' || yOrN == 'Y') {
                             System.out.println("\n\u001B[32mEnter Account Details : \u001B[0m");
+                            sc.nextLine();
 
                             String name;
                             while (true) {
                                 System.out.print("\n\u001B[34mEnter Your Name : \u001B[0m");
-                                name = sc.nextLine();
-                                sc.nextLine();
+                                name = sc.nextLine().trim();
 
                                 boolean isName = check.checkName(name);
                                 if (isName) {
