@@ -17,6 +17,17 @@ Built with **Core Java + OOP + Collections** for clean, modular code.
 - **Language:** Java (OOP, Interfaces, Collections)
 - **Data Structures:** `HashMap`, `ArrayList`
 - **IDE:** VS Code / IntelliJ / Eclipse
-- **Run Environment:** Console/Terminal
+- **Run Environment:** Console/Terminal  
 
+---
 
+## 📸 Demo Screenshots
+
+### 1️⃣ Main Menu
+![Resgistration and Login](images/Output_image_1.png)
+
+### 2️⃣ Banking Operation
+![Deposit and Withdrawl](images/Output_image_2.png)
+
+### 3️⃣ History and Account details
+![Transaction history and Account details](images/Output_image_3.png)
