@@ -3,7 +3,7 @@
 A simple console-based Banking System built with Java and MySQL (JDBC).
 This project demonstrates how to implement core banking operations such as account registration, login, deposits, withdrawals, transfers, and transaction history with persistent storage in a MySQL database.
 
-✨ Features
+✨ Features : 
 
 👤 User Registration & Login
 
@@ -19,7 +19,8 @@ This project demonstrates how to implement core banking operations such as accou
 
 ✅ Input validation for account number, email, and phone number
 
-🛠️ Tech Stack
+
+🛠️ Tech Stack : 
 
 Java 17+
 
@@ -27,7 +28,8 @@ MySQL Database
 
 JDBC (Java Database Connectivity)
 
-📂 Project Structure
+📂 Project Structure :
+
 BankApp.java             # Main entry point
 CheckUserDetails.java    # Input validation
 CheckAccountDetails.java # Account info management
@@ -37,7 +39,8 @@ JdbcServiceHistory.java  # Transaction history
 UserService.java         # Account model
 UserDetails.java         # User details model
 
-⚙️ Setup Instructions
+⚙️ Setup Instructions :
+
 1. Clone the Repository
 git clone https://github.com/your-username/banking-system.git
 cd banking-system
@@ -50,30 +53,51 @@ CREATE DATABASE jdbcBank;
 USE jdbcBank;
 
 -- Service table
+
 CREATE TABLE service (
+
     accNo INT PRIMARY KEY,
+
     balance DOUBLE NOT NULL,
+
     password VARCHAR(100) NOT NULL,
+
     isActive INT DEFAULT 0
+
 );
 
 -- User details table
+
 CREATE TABLE user (
+
     accNo INT PRIMARY KEY,
+
     name VARCHAR(50),
+
     email VARCHAR(50),
+
     phoneNo VARCHAR(15)
+
 );
 
 -- Transaction history table
+
 CREATE TABLE TransHistory (
+
     transId INT AUTO_INCREMENT PRIMARY KEY,
+
     accNo INT,
+
     type VARCHAR(50),
+
     amount DOUBLE,
+
     balance DOUBLE,
+
     targetAccNo INT,
+
     transDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
 );
 
 3. Update Database Credentials
@@ -81,6 +105,7 @@ CREATE TABLE TransHistory (
 In files like JdbcUserService.java, JdbcUserDetails.java, JdbcServiceHistory.java update:
 
 String url = "jdbc:mysql://localhost:3306/jdbcBank?useSSL=false&serverTimezone=UTC";
+
 Connection con = DriverManager.getConnection(url, "root", "YOUR_PASSWORD");
 
 4. Run the Application
@@ -90,7 +115,8 @@ Compile and run:
 javac BankApp.java
 java BankApp
 
-🎮 Usage
+
+🎮 Usage :
 
 Register an account with account number, password, and initial deposit.
 
@@ -110,17 +136,8 @@ View transaction history
 
 Manage account details
 
-📸 Demo (Console Output)
-=================================
-         Banking System
-=================================
-1 - Register Account
-2 - Login
-3 - Exit App
----------------------------------
-Enter the Option[1, 2, 3] :
 
-🚀 Future Improvements
+🚀 Future Improvements : 
 
 🔒 Password hashing for security
 
@@ -132,7 +149,7 @@ Enter the Option[1, 2, 3] :
 
 ---
 
-## 📸 Demo Screenshots
+## 📸 Demo Screenshots : 
 
 ### 1️⃣ Main Menu
 ![Resgistration and Login](images/Output_image_1.png)
