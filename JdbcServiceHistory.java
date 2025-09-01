@@ -45,27 +45,27 @@ public class JdbcServiceHistory {
             
             if(type.equals("Transferred")){
                 
-                System.out.println("Transaction ID : " + rs.getInt("transId") + "\n" +
-                                "On ["  + rs.getTimestamp("transDate") + "]" + 
+                System.out.println(Colors.yellow + "Transaction ID : " + rs.getInt("transId") + Colors.reset + "\n" +
+                                "On " + Colors.blue + "["  + rs.getTimestamp("transDate") + "]" + Colors.reset +
                                 " You have " + rs.getString("type") + 
-                                " Rs. " + rs.getDouble("amount") + 
+                                Colors.red + " Rs. " + rs.getDouble("amount") + Colors.reset +
                                 " to Account Number #Acc " + rs.getObject("targetAccNo") + 
-                                " | Balance : " + rs.getDouble("balance") + "\n");
+                               " | " + Colors.blue + "Balance : " + Colors.reset + Colors.green + rs.getDouble("balance") + Colors.reset+"\n");
             
             }else if(type.equals("Received")){
-                 System.out.println("Transaction ID : " + rs.getInt("transId") + "\n" +
-                                "On ["  + rs.getTimestamp("transDate") + "]" + 
+                 System.out.println(Colors.yellow + "Transaction ID : " + rs.getInt("transId") + Colors.reset + "\n" +
+                                "On " + Colors.blue + "["  + rs.getTimestamp("transDate") + "]" + Colors.reset +
                                 " You have " + rs.getString("type") + 
-                                " Rs. " + rs.getDouble("amount") + 
+                                Colors.green + " Rs. " + rs.getDouble("amount") + Colors.reset +
                                 " from Account Number #Acc " + rs.getObject("targetAccNo") + 
-                                " | Balance : " + rs.getDouble("balance") + "\n");
+                               " | " + Colors.blue + "Balance : " + Colors.reset + Colors.green + rs.getDouble("balance") + Colors.reset+"\n");
             } else {
 
-                System.out.println("Transaction ID : " + rs.getInt("transId") + "\n" +
-                                "On ["  + rs.getTimestamp("transDate") + "]" + 
-                                " You have " + rs.getString("type") + "ed" + 
-                                " Rs. " + rs.getDouble("amount") + 
-                                " | Balance : " + rs.getDouble("balance") + "\n");
+                System.out.println(Colors.yellow + "Transaction ID : " + rs.getInt("transId") + Colors.reset + "\n" +
+                                "On " + Colors.blue + "["  + rs.getTimestamp("transDate") + "]" + Colors.reset +
+                                " You have " + rs.getString("type") + "ed" +  
+                                 Colors.green + " Rs. " + rs.getDouble("amount") + Colors.reset +
+                                " | " + Colors.blue + "Balance : " + Colors.reset + Colors.green + rs.getDouble("balance") + Colors.reset+"\n");
             }
         }
 		con.close();

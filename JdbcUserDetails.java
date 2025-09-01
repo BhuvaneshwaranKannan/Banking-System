@@ -36,10 +36,10 @@ public class JdbcUserDetails {
 
 		ResultSet rs = pst.executeQuery();
 		while (rs.next()) {
-			System.out.println("Account number : " + rs.getInt("accNo") + "\n Name : "
-					+ rs.getString("name") + "\n Email : "
-					+ rs.getString("email") + "\n Phone Number : "
-					+ rs.getString("phoneNo") );
+			System.out.println(Colors.yellow + "Account number : " + rs.getInt("accNo") + Colors.reset + 
+			"\n Name : " + rs.getString("name") + 
+			"\n Email : " + rs.getString("email") + 
+			"\n Phone Number : " + rs.getString("phoneNo") );
 		}
 
 		con.close();
