@@ -31,12 +31,19 @@ JDBC (Java Database Connectivity)
 📂 Project Structure :
 
 BankApp.java             # Main entry point
+
 CheckUserDetails.java    # Input validation
+
 CheckAccountDetails.java # Account info management
+
 JdbcUserService.java     # Service layer (balance, password, activation)
+
 JdbcUserDetails.java     # User info (name, email, phone)
+
 JdbcServiceHistory.java  # Transaction history
+
 UserService.java         # Account model
+
 UserDetails.java         # User details model
 
 ⚙️ Setup Instructions :
