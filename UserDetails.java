@@ -5,12 +5,12 @@ class UserDetails implements BankUserDetails{
     private String phoneNo = null;
 
     public UserDetails(int accNo, String name, String email, String phoneNo){
+    	this.accNo = accNo;
         this.name = name;
-        this.accNo = accNo;
         this.email = email;
         this.phoneNo = phoneNo;
     }
-
+    
     public int getAccNo(){
         return accNo;
     }
@@ -44,13 +44,4 @@ class UserDetails implements BankUserDetails{
     public String getPhoneNo(){
         return phoneNo;
     }
-
-    @Override
-    public String toString(){
-        return "Account Number : " + accNo +
-           "\nYour Name : " + name +
-           "\nYour Email : " + email +
-           "\nYour Phone Number : " + phoneNo;
-    }
-
 }
