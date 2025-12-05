@@ -18,47 +18,46 @@ public class CheckAccountDetails {
         CheckUserDetails check = new CheckUserDetails();
         String name;
         while (true) {
-            System.out.print("\n\u001B[34mEnter Your Name : \u001B[0m");
+            System.out.print(Colors.blue +"\nEnter Your Name : " + Colors.reset);
             name = sc.nextLine();
 
             boolean isName = check.checkName(name);
             if (isName) {
-                System.out.println("\u001B[32mName Verified!\u001B[0m");
+                System.out.println(Colors.green +"Name Verified!" + Colors.reset);
                 break;
             } else {
-                System.out.println("\u001B[31mTry again!\u001B[0m");
+                System.out.println(Colors.red +"Try again!" + Colors.reset);
             }
         }
 
         String email;
         while (true) {
-            System.out.print("\n\u001B[34mEnter Email id : \u001B[0m");
+            System.out.print(Colors.blue +"\nEnter Your Email : " + Colors.reset);
             email = sc.next();
             sc.nextLine();
 
             boolean isEmail = check.checkEmail(email);
 
             if (isEmail) {
-                System.out.println("\u001B[32mEmail Id Verified!\u001B[0m");
+                System.out.println(Colors.green +"Email ID Verified!" + Colors.reset);
                 break;
             } else {
-                System.out.println("\u001B[31mTry again!\u001B[0m");
+                System.out.println(Colors.red +"Try again!" + Colors.reset);
             }
         }
 
         String pn;
         while (true) {
-            System.out.print("\n\u001B[34mEnter Phone Number : \u001B[0m");
+            System.out.print(Colors.blue +"\nEnter Your Phone Number : " + Colors.reset);
             pn = sc.next();
-            sc.nextLine();
 
             boolean isPhoneNumber = check.checkPhoneNumber(pn);
 
             if (isPhoneNumber) {
-                System.out.println("\u001B[32mPhone Number verified\u001B[0m");
+                System.out.println(Colors.green +"Phone Number Verified!" + Colors.reset);
                 break;
             } else {
-                System.out.println("\u001B[31mTry again!\u001B[0m");
+                System.out.println(Colors.red +"Try again!" + Colors.reset);
             }
         }
         return new Helper(name, email, pn);
@@ -69,17 +68,16 @@ public class CheckAccountDetails {
 
         String newName;
         while (true) {
-            System.out.print("\n\u001B[34mEnter Your Name : \u001B[0m");
+            System.out.print(Colors.blue +"Enter Your Name : " + Colors.reset);
             newName = sc.nextLine();
 
             boolean isName = check.checkName(newName);
 
             if (isName) {
-                System.out.println(
-                        "\u001B[32mName Verified!\u001B[0m");
+                System.out.println(Colors.green +"Name Verified!" + Colors.reset);
                 break;
             } else {
-                System.out.println("\u001B[31mTry again!\u001B[0m");
+                System.out.println(Colors.red +"Try again!" + Colors.reset);
             }
         }
         return newName;
@@ -90,18 +88,17 @@ public class CheckAccountDetails {
 
         String newEmail;
         while (true) {
-            System.out.print("\n\u001B[34mEnter Email id : \u001B[0m");
+            System.out.print(Colors.blue +"Enter Your Email : " + Colors.reset);
             newEmail = sc.next();
             sc.nextLine();
 
             boolean isEmail = check.checkEmail(newEmail);
 
             if (isEmail) {
-                System.out.println(
-                        "\u001B[32mEmail Id Verified!\u001B[0m");
+                System.out.println(Colors.green +"Email ID Verified!" + Colors.reset);
                 break;
             } else {
-                System.out.println("\u001B[31mTry again!\u001B[0m");
+                System.out.println(Colors.red +"Try again!" + Colors.reset);
             }
         }
         return newEmail;
@@ -112,19 +109,17 @@ public class CheckAccountDetails {
 
         String newPhoneNumber;
         while (true) {
-            System.out.print(
-                    "\n\u001B[34mEnter Phone Number : \u001B[0m");
+            System.out.print(Colors.blue +"\nEnter Your Phone Number : " + Colors.reset);
             newPhoneNumber = sc.nextLine();
 
             boolean isPhoneNumber = check
                     .checkPhoneNumber(newPhoneNumber);
 
             if (isPhoneNumber) {
-                System.out.println(
-                        "\u001B[32mPhone Number verified\u001B[0m");
+                System.out.println(Colors.green +"Phone Number Verified!" + Colors.reset);
                 break;
             } else {
-                System.out.println("\u001B[31mTry again!\u001B[0m");
+                System.out.println(Colors.red +"Try again!" + Colors.reset);
             }
         }
         return newPhoneNumber;
